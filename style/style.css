@@ -4,6 +4,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* cabecalho */
 .cabecalho {
   display: flex;  
   justify-content: space-between;
@@ -11,11 +12,9 @@ body {
   padding: 1rem;
   height: 56px;
 }
-
 .cabecalho__logo, .cabecalho__logo_img{
   height: 100%;
 }
-
 .cabecalho__pesquisa {
   background-color: rgba(255, 255, 255, .16);
   color: #FFF;
@@ -29,7 +28,6 @@ body {
 .cabecalho__pesquisa:hover {
   background: rgba(255, 255, 255, .24);
 }
-
 .cabecalho__perfil {
   display: flex;
   align-items: center;
@@ -50,7 +48,43 @@ body {
 .cabecalho__perfil__nome {
   padding: 0 1rem;
 }
-
 .principal {
   height: calc(100vh - 88px);
+}
+
+/* corpo */
+.principal {
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 2rem;
+}
+.principal__menu {
+  padding: 0 2rem;
+  width: 20%;
+}
+.principal__menu__title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 0 0 1rem;
+}
+.principal__menu__icon {
+  background-color: rgba(80, 129, 251, .16);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.principal__menu__icon:hover {
+  background-color: rgba(80, 129, 251, .64);
+}
+.principal__menu__icon:active, .active {
+  background-color: rgba(80, 129, 251, 1);
+}
+
+.principal__codigo {
+  width: 60%;
+}
+.principal__projeto {
+  width: 20%;
 }
