@@ -1,0 +1,61 @@
+
+@media screen and (min-width: 0) { /* celular */
+  .cabecalho{
+    /* border-color: blue; */
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+  } 
+  .cabecalho__pesquisa, .cabecalho__perfil__img, .cabecalho__perfil__nome {
+    display: none;
+  }    
+  .cabecalho__pesquisa__icone, .cabecalho__perfil__icone {
+    background: transparent;
+    text-align: center;
+    display: flex;
+  }
+  
+  .principal {
+    flex-direction: column;
+  }
+  .principal__menu {
+    display: none;
+  }
+  .principal__codigo, .principal__projeto {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 445px) { /* tablet */
+  .cabecalho{
+    /* border-color: aquamarine; */
+  } 
+  .cabecalho__pesquisa {
+    display: flex;
+  }
+  .cabecalho__pesquisa__icone {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) { /* notebook */
+  .cabecalho{
+    /* border-color: orange; */
+  } 
+  .cabecalho__perfil__img, .cabecalho__perfil__nome {
+    display: flex;
+  }
+  .cabecalho__perfil__icone {
+    display: none;
+  }
+
+  .principal {
+    flex-direction: row;
+  }
+  .principal__menu, .principal__projeto {
+    display: block;
+    width: 20%;
+  }
+  .principal__codigo {
+    width: 60%;
+  }
+}

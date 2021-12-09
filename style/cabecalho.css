@@ -1,0 +1,38 @@
+
+/* cabecalho */
+.cabecalho {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  height: 3.5rem;
+}
+.cabecalho__logo, .cabecalho__logo_img{
+  height: 100%;
+}
+.cabecalho__pesquisa {
+  width: 52vw;
+}
+.cabecalho__perfil {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 8px;
+  height: 100%;
+  color: inherit;
+}
+.cabecalho__perfil:hover {
+  background: rgba(196, 189, 189, 0.08);
+ }
+.cabecalho__perfil__img {
+  border-radius: 50%;
+  height: 100%;
+}
+.cabecalho__perfil__nome {
+  padding: 0 1rem;
+  background: transparent;
+}
+.cabecalho__perfil__icone {
+  padding-left: 1rem;
+}
