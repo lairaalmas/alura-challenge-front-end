@@ -59,21 +59,23 @@
 }
 .principal__codigo__caixa__decoracao {
   background: inherit;
+  display: flex;
 }
-.principal__codigo__caixa__decoracao i:nth-child(1) {
-  font-size: .75rem;
+.principal__codigo__caixa__decoracao div {
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
   margin-right: .5rem;
-  color: #FF5F56;
 }
-.principal__codigo__caixa__decoracao i:nth-child(2) {
-  font-size: .75rem;
-  margin-right: .5rem;
-  color: #FFBD2E;
+.principal__codigo__caixa__decoracao div:nth-child(1) {
+  background-color: #FF5F56;
 }
-.principal__codigo__caixa__decoracao i:nth-child(3) {
-  font-size: .875rem;
-  margin-right: .5rem;
-  color: #27C93F;
+.principal__codigo__caixa__decoracao div:nth-child(2) {
+  background-color: #FFBD2E;
+}
+.principal__codigo__caixa__decoracao div:nth-child(3) {
+  margin-right: 0;
+  background-color: #27C93F;
 }
 .principal__codigo__texto {  
   margin-top: 1rem;
