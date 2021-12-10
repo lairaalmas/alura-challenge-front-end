@@ -101,3 +101,9 @@ i {
 .inputfield:hover {
   background: rgba(255, 255, 255, .24);
 }
+
+input {
+  -webkit-appearance: none;
+  /* -moz-appearance: none;
+  appearance: none; */
+}
