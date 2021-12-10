@@ -22,22 +22,35 @@
 <body>
   <header>
     <div class="cabecalho">
-      <h1 class="cabecalho__logo">
-        <img class="cabecalho__logo_img" src="assets/logo-plataforma.png">
-      </h1>
-      <form>
-        <input type="text" class="cabecalho__pesquisa inputfield" placeholder="Busque por algo">
-      </form>
-      <button class="cabecalho__perfil">
-        <img class="cabecalho__perfil__img" src="./assets/foto-perfil.png" alt="Foto de perfil do usuário.">
-        <p class="cabecalho__perfil__nome">Harry</p>
-        <div class="cabecalho__pesquisa__icone">
+
+      <div class="cabecalho__logo">
+        <h1>
+          <img class="cabecalho__logo__img" src="assets/logo-plataforma.png">
+        </h1>
+      </div>
+
+      <div class="cabecalho__pesquisa">
+        <form>
+          <input type="text" class="inputfield" placeholder="Busque por algo">
+        </form>
+      </div>
+
+      <div class="cabecalho__mobile">
+        <button class="cabecalho__mobile__pesquisa__icone botao cabecalho">
           <i class="fas fa-search"></i>
-        </div>
-        <div class="cabecalho__perfil__icone">
+        </button>
+        <button class="cabecalho__mobile__perfil__icone botao cabecalho">
           <i class="fas fa-bars"></i>
-        </div>
-      </button>
+        </button>
+      </div>
+
+      <div class="cabecalho__perfil">
+        <button class="botao cabecalho">
+          <img class="cabecalho__perfil__img" src="./assets/foto-perfil.png" alt="Foto de perfil do usuário.">
+          <p class="cabecalho__perfil__nome">Harry</p>
+        </button>
+      </div>
+
     </div>
   </header>
 
@@ -60,7 +73,7 @@
         </nav>
       </div>
 
-      <div class="principal__codigo">
+      <div class="principal__codigo container--column">
         <div class="principal__codigo__borda">
           <div class="principal__codigo__caixa">
             <div class="principal__codigo__caixa__decoracao">
@@ -68,7 +81,7 @@
               <i class="fas fa-circle"></i>
               <i class="fas fa-circle"></i>
             </div>
-            <textarea class="principal__codigo__texto" rows="10"></textarea>
+            <textarea class="principal__codigo__texto" rows="10" spellcheck="false"></textarea>
             <pre class="language-js principal__codigo__texto__hilighed"><code></code></pre>
           </div>
         </div>
@@ -90,7 +103,7 @@
                 class="principal__projeto__form__nome inputfield">
             </div>
             <div class="principal__projeto__form--container">
-              <textarea class="principal__projeto__form__descricao inputfield" rows="3"
+              <textarea class="principal__projeto__form__descricao inputfield" rows="2"
                 placeholder="Descrição do projeto"></textarea>
             </div>
           </fieldset>
@@ -100,12 +113,14 @@
               <h2>Personalização</h2>
             </legend>
 
-            <select class="principal__projeto__form__linguagem inputfield">
-              <option>JavaScript</option>
-              <option>HTML</option>
-              <option>CSS</option>
-            </select>
-            <input type="color" class="principal__projeto__form__cor inputfield" value="#6bd1ff">
+            <div class="principal__projeto__form--container">
+              <select class="principal__projeto__form__linguagem inputfield">
+                <option>JavaScript</option>
+                <option>HTML</option>
+                <option>CSS</option>
+              </select>
+              <input type="color" class="principal__projeto__form__cor inputfield" value="#6bd1ff">
+            </div>
           </fieldset>
 
           <div class="container--column">
