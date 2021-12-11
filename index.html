@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <title>Alura Dev</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
   <linK rel="stylesheet" href="./style/reset.css">
   <linK rel="stylesheet" href="./style/style.css">
   <linK rel="stylesheet" href="./style/cabecalho.css">
   <linK rel="stylesheet" href="./style/corpo.css">
   <linK rel="stylesheet" href="./style/responsivo.css">
   <linK rel="stylesheet" href="./style/prism.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
-    rel="stylesheet">
   <script src="https://kit.fontawesome.com/19dc0097e6.js" crossorigin="anonymous"></script>
   <script src="./script/prism.js"></script>
 </head>
@@ -81,7 +81,18 @@
               <div></div>
               <div></div>
             </div>
-            <textarea class="principal__codigo__texto" rows="10" spellcheck="false"></textarea>
+            <textarea class="principal__codigo__texto" rows="10" spellcheck="false">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}</textarea>
             <pre class="language-js principal__codigo__texto__hilighed"><code></code></pre>
           </div>
         </div>
