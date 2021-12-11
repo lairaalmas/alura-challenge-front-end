@@ -32,3 +32,68 @@
   flex-direction: row;
   height: 100%;
 }
+
+
+@media screen and (min-width: 0) { /* celular */
+  .cabecalho{
+    padding: 0 .4rem;
+    margin: .5rem 0;
+  } 
+  .cabecalho__perfil, .cabecalho__pesquisa {
+    display: none;
+  }
+  .cabecalho__mobile__perfil__icone.botao.cabecalho, 
+  .cabecalho__mobile__pesquisa__icone.botao.cabecalho {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 376px) { /* tablet */
+  .cabecalho{
+    padding: 0 2rem 0 1rem;
+    margin: 2rem 0;
+    justify-content: flex-start;
+  }
+  .cabecalho__pesquisa {
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: .5rem;
+    flex-grow: 1;
+  }
+  .cabecalho__pesquisa form, .cabecalho__pesquisa form input {
+    width: 100%;
+  }
+  .cabecalho__mobile__pesquisa__icone.botao.cabecalho {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) { /* notebook */
+  .cabecalho{
+    justify-content: space-between;
+    padding: 0;
+  }
+  .cabecalho__logo, .cabecalho__perfil {
+    width: 25%;
+    padding: 0 1rem;
+  }
+  .cabecalho__pesquisa {
+    width: 50%;
+    margin: 0;
+    flex-grow: unset;
+  }
+  .cabecalho__mobile .cabecalho__mobile__pesquisa__icone {
+    width: 3.5rem;
+  }
+  .cabecalho__mobile__perfil__icone.botao.cabecalho {
+    display: none;
+  }
+  .cabecalho__perfil {
+    display: flex;
+    padding-right: 2rem;
+  }
+  .cabecalho__perfil__img {
+    padding: .4rem 0;
+  }
+}

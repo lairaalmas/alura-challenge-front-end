@@ -9,7 +9,7 @@
 h1 { /* title */
   font-size: 1.3rem;
   line-height: 2rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 h2 { /* sidebar title */  
   font-size: 0.75rem;
@@ -104,4 +104,28 @@ i {
 
 input {
   -webkit-appearance: none;
+}
+
+@media screen and (min-width: 0) { /* celular */
+  html {
+    font-size: 14px;
+  }
+  .container--column {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 376px) { /* tablet */
+  .container--column {
+    margin: 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) { /* notebook */
+  html {
+    font-size: 16px;
+  }
+  .container--column {
+    margin: 0 2rem;
+  }
 }
