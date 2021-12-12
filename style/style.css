@@ -113,11 +113,11 @@ input {
   }
 }
 
-@media screen and (min-width: 376px) { /* tablet */
+@media screen and (min-width: 436px) { /* tablet */
   .container {
     padding: 0 1.9rem;
   }
 }
 
-@media screen and (min-width: 769px) { /* notebook */
+@media screen and (min-width: 934px) { /* notebook */
 }

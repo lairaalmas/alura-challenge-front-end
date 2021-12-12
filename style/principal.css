@@ -147,7 +147,7 @@ input[type='color']::-webkit-color-swatch {
   }
 }
 
-@media screen and (min-width: 376px) { /* tablet */
+@media screen and (min-width: 436px) { /* tablet */
   .principal__codigo {
     margin: 0 1.9rem;
     padding: 0;
@@ -169,7 +169,7 @@ input[type='color']::-webkit-color-swatch {
   }
 }
 
-@media screen and (min-width: 769px) { /* notebook */
+@media screen and (min-width: 934px) { /* notebook */
   .principal {
     flex-direction: row;
   }
