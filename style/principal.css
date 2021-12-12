@@ -1,0 +1,194 @@
+.principal {
+  height: calc(100vh - 3.5rem - 4rem);
+  display: flex;
+}
+
+/* menu */
+.principal__menu__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.principal__menu__item .principal__menu__icon {
+  background: #5081FB;
+  cursor: pointer;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .875rem .72rem;
+  opacity: .16;
+}
+.principal__menu__item .principal__menu__titulo {
+  margin-left: 1rem;
+  opacity: .56;
+}
+.principal__menu__item:hover .principal__menu__icon {  
+  opacity: .64;
+  transition: .3s all;
+}
+.principal__menu__item:hover .principal__menu__titulo {  
+  opacity: .72;
+  transition: .3s all;
+}
+.principal__menu__item:active .principal__menu__icon, 
+.principal__menu__item:active .principal__menu__titulo,
+.active .principal__menu__icon, 
+.active .principal__menu__titulo {  
+  opacity: 1;
+}
+
+/* codigo */
+.principal__codigo { 
+  align-items: center;
+}
+.principal__codigo__borda {
+  background-color: #6BD1FF;
+  border-radius: .5rem;
+  height: auto;
+}
+.principal__codigo__janela {
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
+  border-radius: .5rem;
+  resize: vertical;
+  padding: .8rem;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .24);  
+}
+.principal__codigo__janela--decoracao {
+  background: inherit;
+  display: flex;
+
+}
+.principal__codigo__janela--decoracao div {
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+.principal__codigo__janela--decoracao div:nth-child(1) {
+  background-color: #FF5F56;
+}
+.principal__codigo__janela--decoracao div:nth-child(2) {
+  background-color: #FFBD2E;
+}
+.principal__codigo__janela--decoracao div:nth-child(3) {
+  margin-right: 0;
+  background-color: #27C93F;
+}
+.principal__codigo__texto {  
+  margin-top: 1rem;
+  background-color: inherit;
+  border: none;
+  resize: vertical;
+  padding: 0.2rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.15rem
+}
+.principal__codigo__texto__hilighed {
+  display: none;
+}
+.principal__codigo__botao {
+  margin-bottom: 1.7rem;
+}
+
+/* personalização */
+.principal__projeto .input {
+  width: 100%;
+}
+.principal__projeto__nome, .principal__projeto__descricao, .principal__projeto__linguagem {
+  font-family: inherit;
+  margin-bottom: .8rem;
+}
+input::placeholder, textarea::placeholder {
+  color: #FFF;
+  opacity: .64;
+}
+.principal__projeto__linguagem {
+  color: rgba(255, 255, 255, .64);
+}
+.principal__projeto__descricao textarea {
+  height: auto;
+  padding: .875rem .975rem;
+  resize: vertical;
+  min-height: 4.9rem;
+}
+.principal__projeto__cor input{
+  padding: 0.5rem;
+  border: .0625rem solid white;
+  margin-bottom: 1.7rem;
+}
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: .25rem;
+}
+
+@media screen and (min-width: 0) { /* celular */
+  .principal {
+    flex-direction: column;
+  }
+  .principal__menu {
+    display: none;
+  }
+  .principal__codigo {
+    padding: 0 .8rem;
+  }
+  .principal__codigo__borda {
+    padding: 2rem;
+    margin-bottom: 1rem; 
+  }
+  .principal__projeto fieldset:nth-child(1), .principal__codigo__enviar {
+    margin-bottom: 1.7rem;
+  }
+  .principal__codigo__texto {
+    height: 24rem;
+  }
+}
+
+@media screen and (min-width: 376px) { /* tablet */
+  .principal__codigo {
+    margin: 0 1.9rem;
+    padding: 0;
+  }
+  .principal__codigo__borda {
+    padding: 2rem;
+    margin-bottom: 2rem; 
+  }
+  .principal__projeto__personalizacao {
+    display: flex;
+    justify-content: space-between;
+  }
+  .principal__projeto__linguagem, .principal__projeto__cor {    
+    width: 49%;
+  }
+
+  .principal__codigo__texto {
+    height: 15.3rem;
+  }
+}
+
+@media screen and (min-width: 769px) { /* notebook */
+  .principal {
+    flex-direction: row;
+  }
+  .principal__menu, .principal__projeto { 
+    display: flex;
+    width: 24vw;
+  }
+  .principal__codigo { 
+    width: 52vw;
+    margin: 0;
+    padding: 0; 
+  }
+  .principal__codigo__borda {
+    padding: 2rem;
+  }
+  .principal__projeto__personalizacao {
+    display: block;
+  }
+  .principal__projeto__linguagem, .principal__projeto__cor {
+    width: 100%;
+  }
+}

@@ -1,5 +1,3 @@
-
-/* cabecalho */
 .cabecalho {
   display: flex;  
   justify-content: space-between;
@@ -11,39 +9,34 @@
   align-items: center;
 }
 .cabecalho__logo__img {
-  height: 3.5rem;
+  height: 4.1rem;
 }
 .cabecalho__perfil {
   height: 3.5rem;
   display: flex;
   justify-content: flex-end;
 }
-
 .cabecalho__perfil__img {
   border-radius: 50%;
-  height: 100%;
+  height: 80%;
 }
 .cabecalho__perfil__nome {
   background: transparent;
   padding: 0 1rem;
 }
-.cabecalho__mobile {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-}
-
 
 @media screen and (min-width: 0) { /* celular */
   .cabecalho{
     padding: 0 .4rem;
-    margin: .5rem 0;
+    margin: .5rem 0 2rem 0;
   } 
-  .cabecalho__perfil, .cabecalho__pesquisa {
-    display: none;
+  /* esconde elementos */
+  .cabecalho__perfil--desktop, .cabecalho__pesquisa {
+    display: none; 
   }
-  .cabecalho__mobile__perfil__icone.botao.cabecalho, 
-  .cabecalho__mobile__pesquisa__icone.botao.cabecalho {
+  /* mostra icones */
+  .cabecalho__perfil--mobile, .cabecalho__pesquisa--mobile  {
+    display: flex;
     padding: 1rem;
   }
 }
@@ -61,10 +54,12 @@
     margin-right: .5rem;
     flex-grow: 1;
   }
-  .cabecalho__pesquisa form, .cabecalho__pesquisa form input {
+  /* mostra elemento */
+  .cabecalho__pesquisa form, .cabecalho__pesquisa--desktop {
     width: 100%;
   }
-  .cabecalho__mobile__pesquisa__icone.botao.cabecalho {
+  /* esconde icone */
+  .cabecalho__perfil--mobile {
     display: none;
   }
 }
@@ -75,22 +70,22 @@
     padding: 0;
   }
   .cabecalho__logo, .cabecalho__perfil {
-    width: 25%;
-    padding: 0 1rem;
+    width: 24vw;
+    padding: 0 .9rem;
   }
-  .cabecalho__pesquisa {
-    width: 50%;
+  .cabecalho__pesquisa { 
+    width: 52vw;
     margin: 0;
     flex-grow: unset;
   }
-  .cabecalho__mobile .cabecalho__mobile__pesquisa__icone {
-    width: 3.5rem;
-  }
-  .cabecalho__mobile__perfil__icone.botao.cabecalho {
+  /* esconde icone */
+  .cabecalho__pesquisa--mobile {
     display: none;
   }
-  .cabecalho__perfil {
+  /* mostra elemento */
+  .cabecalho__perfil--desktop {
     display: flex;
+    align-items: center;
     padding-right: 2rem;
   }
   .cabecalho__perfil__img {

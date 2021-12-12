@@ -6,29 +6,29 @@
   word-break: break-word;
 }
 
-h1 { /* title */
+h1 {
   font-size: 1.3rem;
   line-height: 2rem;
   font-weight: 700;
 }
-h2 { /* sidebar title */  
+h2 { 
   font-size: 0.75rem;
   line-height: 1.5rem;
   text-transform: uppercase;
   letter-spacing: .25rem;
   padding: 0 0 1rem;
 }
+a {
+  text-decoration: none;
+}
 i {
   background: transparent;
   font-size: 1.25rem;
 }
-
-.container--column {
+.container {
   display: flex;
   flex-direction: column;
-  padding: 0;
 }
-
 .botao {
   font-size: .875rem;
   min-height: 3.5rem;
@@ -39,40 +39,41 @@ i {
   white-space: normal;
 }
 
-.botao.filled {
+.botao--filled {
   background-color: #5081FB;
   color: #051D3B;
   border-radius: .5rem;
+  width: 100%;
 }
-.botao.filled:hover {
+.botao--filled:hover {
   background: #7BA4FC;
 }
-.botao.filled:active {
+.botao--filled:active {
   background: #7BA4FC;
   border: .25rem solid rgba(80, 129, 251, .72);
 }
-.botao.filled:focus {
+.botao--filled:focus {
   background: #96B9FD;
 }
 
-.botao.outlined {
+.botao--outlined {
   width: 100%;
   background: rgba(80, 129, 251, .08);
   color: #FFF;
   border-radius: .5rem;
 }
-.botao.outlined:hover {
+.botao--outlined:hover {
   background: rgba(80, 129, 251, .16);
 }
-.botao.outlined:active {
+.botao--outlined:active {
   background: rgba(80, 129, 251, .16);
   border: .5rem solid rgba(80, 129, 251, .24);
 }
-.botao.outlined:focus {
+.botao--outlined:focus {
   background: rgba(80, 129, 251, .24);
 }
 
-.botao.cabecalho {
+.botao--cabecalho {
   text-align: center;
   background: rgba(255, 255, 255, 0);
   height: 100%;
@@ -81,51 +82,42 @@ i {
   padding: 0 1.5rem;
   margin: 0;
 }
-.botao.cabecalho p {
-  padding: 0;
-  margin-left: .5rem;
-}
-.botao.cabecalho:hover{
+.botao--cabecalho:hover{
   background: rgba(196, 189, 189, 0.08);
 }
-
-.inputfield {
-  background-color: rgba(255, 255, 255, .16);
-  color: #FFF;
-  font-size: .875rem;
-  height: 3.5rem;
-  border: none;
-  border-radius: .5rem;
-  padding: 0 .75rem;  
-}
-.inputfield:hover {
-  background: rgba(255, 255, 255, .24);
+.botao--cabecalho p {
+  padding: 0;
+  margin-left: .5rem;
 }
 
 input {
   -webkit-appearance: none;
 }
 
+.input {
+  background-color: rgba(255, 255, 255, .16);
+  color: #FFF;
+  font-size: .875rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: .5rem;
+  padding: 0 .75rem; 
+}
+.input:hover {
+  background: rgba(255, 255, 255, .24);
+}
+
 @media screen and (min-width: 0) { /* celular */
-  html {
-    font-size: 14px;
-  }
-  .container--column {
-    margin: 0 1rem;
+  .container {
+    padding: 0 .8rem;
   }
 }
 
 @media screen and (min-width: 376px) { /* tablet */
-  .container--column {
-    margin: 2rem 2rem;
+  .container {
+    padding: 0 1.9rem;
   }
 }
 
 @media screen and (min-width: 769px) { /* notebook */
-  html {
-    font-size: 16px;
-  }
-  .container--column {
-    margin: 0 2rem;
-  }
 }

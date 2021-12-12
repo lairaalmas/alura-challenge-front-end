@@ -12,135 +12,129 @@
   <linK rel="stylesheet" href="./style/reset.css">
   <linK rel="stylesheet" href="./style/style.css">
   <linK rel="stylesheet" href="./style/cabecalho.css">
-  <linK rel="stylesheet" href="./style/corpo.css">
-  <linK rel="stylesheet" href="./style/responsivo.css">
+  <linK rel="stylesheet" href="./style/principal.css">
   <linK rel="stylesheet" href="./style/prism.css">
   <script src="https://kit.fontawesome.com/19dc0097e6.js" crossorigin="anonymous"></script>
   <script src="./script/prism.js"></script>
 </head>
 
 <body>
-  <header>
-    <div class="cabecalho">
 
-      <div class="cabecalho__logo">
-        <h1>
-          <a href="#"><img class="cabecalho__logo__img" src="assets/logo-plataforma.png"></a>
-        </h1>
-      </div>
+  <header class="cabecalho">
 
-      <div class="cabecalho__pesquisa">
-        <form>
-          <input type="text" class="inputfield" placeholder="Busque por algo">
-        </form>
-      </div>
-
-      <div class="cabecalho__mobile">
-        <button class="cabecalho__mobile__pesquisa__icone botao cabecalho">
-          <i class="fas fa-search"></i>
-        </button>
-        <button class="cabecalho__mobile__perfil__icone botao cabecalho">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <div class="cabecalho__perfil">
-        <button class="botao cabecalho">
-          <img class="cabecalho__perfil__img" src="./assets/foto-perfil.png" alt="Foto de perfil do usuário.">
-          <p class="cabecalho__perfil__nome">Harry</p>
-        </button>
-      </div>
-
+    <div class="cabecalho__logo">
+      <a href="#"><img src="assets/logo-plataforma.png" alt="Logo da Alura Dev." class="cabecalho__logo__img"></a>
     </div>
+
+    <div class="cabecalho__pesquisa">
+      <form>
+        <input type="text" class="cabecalho__pesquisa--desktop input" placeholder="Burque por algo">
+      </form>
+    </div>
+
+    <div class="cabecalho__perfil">
+      <button class="cabecalho__perfil--mobile botao botao--cabecalho">
+        <i class="fas fa-search"></i>
+      </button>
+      <button class="cabecalho__pesquisa--mobile botao botao--cabecalho">
+        <i class="fas fa-bars"></i>
+      </button>
+      <button class="cabecalho__perfil--desktop botao botao--cabecalho">
+        <img src="./assets/foto-perfil.png" alt="Foto de perfil do usuário." class="cabecalho__perfil__img">
+        <p class="cabecalho__perfil__nome">Harry</p>
+      </button>
+    </div>
+
   </header>
 
-  <main>
-    <div class="principal">
+  <main class="principal">
 
-      <div class="principal__menu">
-        <nav class="container--column">
-          <h2>Menu</h2>
-          <ul>
-            <li class="principal__menu__item active">
-              <i class="principal__menu__item__icon active fas fa-code"></i>
-              <a href="#" class="principal__menu__item__titulo">Editor de código</a>
-            </li>
-            <li class="principal__menu__item">
-              <i class="principal__menu__item__icon fas fa-users"></i>
-              <a href="#" class="principal__menu__item__titulo">Comunidade</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <section class="principal__menu container">
+      <h2>Menu</h2>
+      <nav>
+        <ul>
+          <li>
+            <a class="principal__menu__item active" href="#">
+              <i class="principal__menu__icon fas fa-code "></i>
+              <span class="principal__menu__titulo">Editor de código</span>
+            </a>
+          </li>
+          <li>
+            <a class="principal__menu__item" href="#">
+              <i class="principal__menu__icon fas fa-users"></i>
+              <span class="principal__menu__titulo">Comunidade</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
 
-      <div class="principal__codigo container--column">
-        <div class="principal__codigo__borda">
-          <div class="principal__codigo__caixa">
-            <div class="principal__codigo__caixa__decoracao">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <textarea class="principal__codigo__texto" rows="10" spellcheck="false">
+    <section class="principal__codigo">
+      <div class="principal__codigo__borda">
+        <div class="principal__codigo__janela">
+          <div class="principal__codigo__janela--decoracao">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <textarea class="principal__codigo__texto" rows="13" spellcheck="false">
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 
 const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-        const res = f(seed)
-        return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-}</textarea>
-            <pre class="language-js principal__codigo__texto__hilighed"><code></code></pre>
-          </div>
-        </div>
-        <div class="principal__codigo__botao">
-          <button class="botao outlined">Visualizar com o highlight</button>
+  const go = (f, seed, acc) => {
+      const res = f(seed)
+      return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}
+          </textarea>
+          <!--<pre class="language-js principal__codigo__texto__hilighed"><code></code></pre>-->
         </div>
       </div>
+      <div class="principal__codigo__botao">
+        <button class="botao botao--outlined">Visualizar com o highlight</button>
+      </div>
+    </section>
 
-      <div class="principal__projeto">
-        <form class="principal__projeto__form">
+    <section class="principal__projeto container">
+      <form>
+        <fieldset>
+          <legend>
+            <h2>Seu Projeto</h2>
+          </legend>
+          <div class="principal__projeto__nome">
+            <input type="text" placeholder="Nome do Projeto" class="input">
+          </div>
+          <div class="principal__projeto__descricao">
+            <textarea name="" id="" cols="auto" rows="3" placeholder="Descrição do projeto" class="input"></textarea>
+          </div>
+        </fieldset>
 
-          <fieldset class="container--column">
-            <legend>
-              <h2>Seu Projeto</h2>
-            </legend>
-
-            <div class="principal__projeto__form--container">
-              <input type="text" placeholder="Nome do projeto" size="50%"
-                class="principal__projeto__form__nome inputfield">
-            </div>
-            <div class="principal__projeto__form--container">
-              <textarea class="principal__projeto__form__descricao inputfield" rows="2"
-                placeholder="Descrição do projeto"></textarea>
-            </div>
-          </fieldset>
-
-          <fieldset class="container--column">
-            <legend>
-              <h2>Personalização</h2>
-            </legend>
-
-            <div class="principal__projeto__form--container">
-              <select class="principal__projeto__form__linguagem inputfield">
-                <option>JavaScript</option>
-                <option>HTML</option>
-                <option>CSS</option>
+        <fieldset>
+          <legend>
+            <h2>Personalização</h2>
+          </legend>
+          <div class="principal__projeto__personalizacao">
+            <div class="principal__projeto__linguagem">
+              <select class="input">
+                <option value="js">JavaScript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
               </select>
-              <input type="color" class="principal__projeto__form__cor inputfield" value="#6bd1ff">
             </div>
-          </fieldset>
-
-          <div class="container--column">
-            <input type="submit" value="Salvar projeto" class="principal__projeto__form__envio botao filled">
+            <div class="principal__projeto__cor">
+              <input type="color" value="#6bd1ff" class="input">
+            </div>
           </div>
+        </fieldset>
 
-        </form>
-      </div>
-    </div>
+        <div class="principal__projeto__enviar">
+          <input type="submit" class="botao botao--filled">
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 
