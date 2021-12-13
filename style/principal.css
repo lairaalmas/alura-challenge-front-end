@@ -11,7 +11,6 @@
 }
 .principal__menu__item .principal__menu__icon {
   background: #5081FB;
-  cursor: pointer;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -25,11 +24,11 @@
 }
 .principal__menu__item:hover .principal__menu__icon {  
   opacity: .64;
-  transition: .3s all;
+  transition: .2s all;
 }
 .principal__menu__item:hover .principal__menu__titulo {  
   opacity: .72;
-  transition: .3s all;
+  transition: .2s all;
 }
 .principal__menu__item:active .principal__menu__icon, 
 .principal__menu__item:active .principal__menu__titulo,
