@@ -144,6 +144,9 @@ input[type='color']::-webkit-color-swatch {
   .principal__codigo__texto {
     height: 24rem;
   }
+  .principal__projeto__enviar {
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (min-width: 436px) { /* tablet */
