@@ -10,5 +10,5 @@ Figma do projeto: https://www.figma.com/file/Ve4hpTfmMa7yAFneoGtGKD/Alura-Challe
 
 - HTML5
 - CSS3
-
-
+- JS
+  - Highlightjs
