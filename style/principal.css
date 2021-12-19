@@ -9,7 +9,8 @@
   align-items: center;
   margin-bottom: 1rem;
 }
-.principal__menu__item .principal__menu__icon {
+
+.principal__menu__item .principal__menu__icone {
   background: #5081FB;
   border-radius: 1rem;
   display: flex;
@@ -17,22 +18,25 @@
   align-items: center;
   padding: .875rem .72rem;
   opacity: .16;
+  transition: .5s all;
 }
 .principal__menu__item .principal__menu__titulo {
   margin-left: 1rem;
   opacity: .56;
 }
-.principal__menu__item:hover .principal__menu__icon {  
+/* hover */
+.principal__menu__item:hover .principal__menu__icone {  
   opacity: .64;
-  transition: .2s all;
 }
 .principal__menu__item:hover .principal__menu__titulo {  
   opacity: .72;
-  transition: .2s all;
 }
-.principal__menu__item:active .principal__menu__icon, 
+/* active */
+.principal__menu__item:active .principal__menu__icone, 
 .principal__menu__item:active .principal__menu__titulo,
-.active .principal__menu__icon, 
+.active:hover .principal__menu__icone, 
+.active:hover .principal__menu__titulo,
+.active .principal__menu__icone, 
 .active .principal__menu__titulo {  
   opacity: 1;
 }
@@ -78,16 +82,17 @@
 }
 .principal__codigo__texto {  
   margin-top: 1rem;
-  background-color: inherit;
-  border: none;
+  background: inherit;
   resize: vertical;
-  padding: 0.2rem;
+  overflow: auto; 
+  border: none;
+}
+.principal__codigo__texto code { 
+  background: inherit;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.9rem;
-  line-height: 1.15rem
-}
-.principal__codigo__texto__hilighed {
-  display: none;
+  line-height: 1.15rem;
+  border: none;
 }
 .principal__codigo__botao {
   margin-bottom: 1.7rem;

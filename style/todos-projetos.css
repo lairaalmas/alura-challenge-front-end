@@ -1,0 +1,12 @@
+@media screen and (min-width: 0) { /* celular */
+  .principal__codigo { 
+    
+  }
+}
+
+@media screen and (min-width: 436px) { /* tablet */
+}
+
+@media screen and (min-width: 934px) { /* notebook */
+
+}

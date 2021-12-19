@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Alura Dev</title>
+  <title>Alura Dev - Editor de Código</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,7 @@
   <linK rel="stylesheet" href="./style/style.css">
   <linK rel="stylesheet" href="./style/cabecalho.css">
   <linK rel="stylesheet" href="./style/principal.css">
-  <linK rel="stylesheet" href="./style/prism.css">
-  <script src="https://kit.fontawesome.com/19dc0097e6.js" crossorigin="anonymous"></script>
-  <script src="./script/prism.js"></script>
+  <link rel="stylesheet" href="./style/highlight/dracula.css">
 </head>
 
 <body>
@@ -34,10 +32,10 @@
 
     <div class="cabecalho__perfil">
       <button class="cabecalho__perfil--mobile botao botao--cabecalho">
-        <i class="fas fa-search"></i>
+        <img src="assets/search.svg"></img>
       </button>
       <button class="cabecalho__pesquisa--mobile botao botao--cabecalho">
-        <i class="fas fa-bars"></i>
+        <img src="assets/bars.svg"></img>
       </button>
       <button class="cabecalho__perfil--desktop botao botao--cabecalho">
         <img src="./assets/foto-perfil.png" alt="Foto de perfil do usuário." class="cabecalho__perfil__img">
@@ -54,14 +52,14 @@
       <nav>
         <ul>
           <li>
-            <a class="principal__menu__item active" href="#">
-              <i class="principal__menu__icon fas fa-code "></i>
+            <a class="principal__menu__item active" href="index.html">
+              <img class="principal__menu__icone" src="assets/code.svg"></img>
               <span class="principal__menu__titulo">Editor de código</span>
             </a>
           </li>
           <li>
-            <a class="principal__menu__item" href="#">
-              <i class="principal__menu__icon fas fa-users"></i>
+            <a class="principal__menu__item" href="todos-projetos.html">
+              <img class="principal__menu__icone" src="assets/users.svg"></img>
               <span class="principal__menu__titulo">Comunidade</span>
             </a>
           </li>
@@ -70,15 +68,14 @@
     </section>
 
     <section class="principal__codigo">
-      <div class="principal__codigo__borda">
+      <div class="principal__codigo__borda" data-borda>
         <div class="principal__codigo__janela">
           <div class="principal__codigo__janela--decoracao">
             <div></div>
             <div></div>
             <div></div>
           </div>
-          <textarea class="principal__codigo__texto" rows="13" spellcheck="false">
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+          <pre class="principal__codigo__texto"><code class="hljs language-plaintext" data-codigo contenteditable="true" spellcheck="false" aria-label="Campo do editor de código">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 
@@ -89,12 +86,11 @@ const unfold = (f, seed) => {
   }
   return go(f, seed, [])
 }
-          </textarea>
-          <!--<pre class="language-js principal__codigo__texto__hilighed"><code></code></pre>-->
+</code></pre>
         </div>
       </div>
       <div class="principal__codigo__botao">
-        <button type="submit" class="botao botao--outlined">Visualizar com o highlight</button>
+        <button type="submit" class="botao botao--outlined" data-highlight>Visualizar com o highlight</button>
       </div>
     </section>
 
@@ -118,44 +114,26 @@ const unfold = (f, seed) => {
           </legend>
           <div class="principal__projeto__personalizacao">
             <div class="principal__projeto__linguagem">
-              <select class="input">
-                <option value="js">JavaScript</option>
+              <select class="input" data-linguagem>
+                <option value="javascript">JavaScript</option>
                 <option value="html">HTML</option>
                 <option value="css">CSS</option>
               </select>
             </div>
             <div class="principal__projeto__cor">
-              <input type="color" value="#6bd1ff" class="input">
+              <input type="color" value="#6bd1ff" class="input" data-cor>
             </div>
           </div>
         </fieldset>
 
         <div class="principal__projeto__enviar">
-          <input type="submit" class="botao botao--filled">
+          <input type="submit" class="botao botao--filled" value="Salvar produto">
         </div>
       </form>
     </section>
   </main>
+  <script src="./script/highlight/highlight.min.js"></script>
+  <script src="./script/principal.js"></script>
 </body>
-
-<script>
-  document.getElementsByClassName('principal__codigo__texto')[0].addEventListener('keydown', function (e) {
-    if (e.key == 'Tab') {
-
-      e.preventDefault();
-
-      let start = this.selectionStart;
-      let end = this.selectionEnd;
-
-      // set textarea value to: text before caret + tab + text after caret
-      this.value = this.value.substring(0, start) +
-        " " + this.value.substring(end);
-
-      // put caret at right position again
-      this.selectionStart =
-        this.selectionEnd = start + 1;
-    }
-  });
-</script>
 
 </html>

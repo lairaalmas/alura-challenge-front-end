@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alura Dev - Comunidade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
+  <linK rel="stylesheet" href="./style/reset.css">
+  <linK rel="stylesheet" href="./style/style.css">
+  <linK rel="stylesheet" href="./style/cabecalho.css">
+  <linK rel="stylesheet" href="./style/principal.css">
+  <linK rel="stylesheet" href="./style/todos-projetos.css">
+  <link rel="stylesheet" href="./style/highlight/dracula.css">
+</head>
+
+<body>
+
+  <header class="cabecalho">
+
+    <div class="cabecalho__logo">
+      <a href="index.html"><img src="assets/logo-plataforma.png" alt="Logo da Alura Dev."
+          class="cabecalho__logo__img"></a>
+    </div>
+
+    <div class="cabecalho__pesquisa">
+      <form>
+        <input type="text" class="cabecalho__pesquisa--desktop input" placeholder="Burque por algo">
+      </form>
+    </div>
+
+    <div class="cabecalho__perfil">
+      <button class="cabecalho__perfil--mobile botao botao--cabecalho">
+        <img src="assets/search.svg"></img>
+      </button>
+      <button class="cabecalho__pesquisa--mobile botao botao--cabecalho">
+        <img src="assets/bars.svg"></img>
+      </button>
+      <button class="cabecalho__perfil--desktop botao botao--cabecalho">
+        <img src="./assets/foto-perfil.png" alt="Foto de perfil do usuário." class="cabecalho__perfil__img">
+        <p class="cabecalho__perfil__nome">Harry</p>
+      </button>
+    </div>
+
+  </header>
+
+  <main class="principal">
+
+    <section class="principal__menu container">
+      <h2>Menu</h2>
+      <nav>
+        <ul>
+          <li>
+            <a class="principal__menu__item" href="index.html">
+              <img class="principal__menu__icone" src="assets/code.svg"></img>
+              <span class="principal__menu__titulo">Editor de código</span>
+            </a>
+          </li>
+          <li>
+            <a class="principal__menu__item active" href="todos_projetos.html">
+              <img class="principal__menu__icone" src="assets/users.svg"></img>
+              <span class="principal__menu__titulo">Comunidade</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="principal__codigo">
+
+      <div class="principal__codigo__borda" data-borda>
+        <div class="principal__codigo__janela">
+          <div class="principal__codigo__janela--decoracao">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <pre class="principal__codigo__texto"><code class="hljs language-css" data-codigo contenteditable="true" spellcheck="false" aria-label="Campo do editor de código">body { 
+  background: #f0f0f0; 
+}
+</code></pre>
+        </div>
+      </div>
+
+      <div class="principal__codigo__borda" data-borda>
+        <div class="principal__codigo__janela">
+          <div class="principal__codigo__janela--decoracao">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <pre class="principal__codigo__texto"><code class="hljs language-javascript" data-codigo contenteditable="true" spellcheck="false" aria-label="Campo do editor de código">for (let i = 0; i &lt; 10; i++) {
+  console.log(i);            
+}
+</code></pre>
+        </div>
+      </div>
+
+      <div class="principal__codigo__borda" data-borda>
+        <div class="principal__codigo__janela">
+          <div class="principal__codigo__janela--decoracao">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <pre class="principal__codigo__texto"><code class="hljs language-html" data-codigo contenteditable="true" spellcheck="false" aria-label="Campo do editor de código">&lt;!DOCTYPE html>
+&lt;html lang="pt-br">
+
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>Meu primeiro programa&lt;/title>
+&lt;/head>
+
+&lt;body>
+  &lt;h1>Hello World&lt;/h1>
+&lt;/body>
+
+&lt;/html></code></pre>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <script src="./script/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll()</script>
+</body>
+
+</html>
